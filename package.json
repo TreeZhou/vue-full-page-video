@@ -1,6 +1,6 @@
 {
   "name": "vue-full-page-video",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "main": "./dist/vue-full-page-video.min.js",
   "scripts": {

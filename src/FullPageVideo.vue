@@ -107,6 +107,7 @@ export default {
       document.body.removeChild(this.$el);
     },
     close() {
+      this.$emit('close');
       this.pause();
     },
 
