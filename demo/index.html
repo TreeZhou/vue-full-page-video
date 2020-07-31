@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>vue-directive-draggable</title>
+  </head>
+  <script src="./vue.js"></script>
+  <script src="../dist/vue-full-page-video.js"></script>
+  <script src="./vconsole.min.js"></script>
+  <script>
+    new VConsole();
+    Vue.use(
+      window['vue-full-page-video'].default || window['vue-full-page-video']
+    );
+  </script>
+
+  <body>
+    <div id="app"></div>
+  </body>
+  <script>
+    new Vue({
+      el: '#app',
+      mounted() {
+        const VideoSrc =
+          'https://cdn2.h5no1.com/server/apg-win-on-top/20200722/qobGiqfWkHBjG7v?OSSAccessKeyId=LTAIUUHINaeueXoP&Signature=gDqV565aumhXH3LiPVlhK4%2BMt7w%3D&Expires=1626520416';
+        debugger;
+        const fullPageVideoInstance = this.$fullPageVideo.play(VideoSrc);
+      }
+    });
+  </script>
+</html>
