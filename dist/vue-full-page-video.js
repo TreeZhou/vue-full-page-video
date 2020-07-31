@@ -155,6 +155,7 @@ __webpack_require__.r(__webpack_exports__);
       document.body.removeChild(this.$el);
     },
     close: function close() {
+      this.$emit('close');
       this.pause();
     },
     onCanplay: function onCanplay() {

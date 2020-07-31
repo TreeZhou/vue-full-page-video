@@ -23,10 +23,15 @@
     new Vue({
       el: '#app',
       mounted() {
-        const VideoSrc =
-          'https://cdn2.h5no1.com/server/apg-win-on-top/20200722/qobGiqfWkHBjG7v?OSSAccessKeyId=LTAIUUHINaeueXoP&Signature=gDqV565aumhXH3LiPVlhK4%2BMt7w%3D&Expires=1626520416';
-        debugger;
-        const fullPageVideoInstance = this.$fullPageVideo.play(VideoSrc);
+        let timer = setTimeout(() => {
+          const VideoSrc =
+            'https://cdn2.h5no1.com/server/apg-win-on-top/20200722/qobGiqfWkHBjG7v?OSSAccessKeyId=LTAIUUHINaeueXoP&Signature=gDqV565aumhXH3LiPVlhK4%2BMt7w%3D&Expires=1626520416';
+          const fullPageVideoInstance = this.$fullPageVideo.play(VideoSrc);
+          fullPageVideoInstance.$on('close', () => {
+            debugger;
+          });
+          clearTimeout(timer);
+        }, 1000);
       }
     });
   </script>
